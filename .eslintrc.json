@@ -1,0 +1,9 @@
+{
+  "extends": ["react-app", "airbnb-typescript"],
+   "parserOptions": {
+   "project": "./tsconfig.json"
+   },
+   "rules": {
+      "linebreak-style": 0
+   }
+}
