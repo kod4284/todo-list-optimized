@@ -1,9 +1,9 @@
 import React from 'react';
-import Test from '@/components/Test';
+import TodoTemplate from './components/TodoTemplate';
 
 function App() {
   return (
-    <Test />
+    <TodoTemplate>Make Todo app!</TodoTemplate>
   );
 }
 
