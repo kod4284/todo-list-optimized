@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+This is a boilerplate composed by creact-react-app-typescript with craco absolute path setting, ts-lint.
 
 ## Available Scripts
 
