@@ -11,7 +11,7 @@ function TodoListItem() {
     <div className="TodoListItem">
       <div className="checkbox">
         <MdCheckBoxOutlineBlank />
-        <div className="text">Todos</div>
+        <div className="text">Todo</div>
       </div>
       <div className="remove">
         <MdRemoveCircleOutline />
