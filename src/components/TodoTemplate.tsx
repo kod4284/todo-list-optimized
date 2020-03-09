@@ -1,4 +1,5 @@
 import React from 'react';
+import '@/styles/TodoTemplate.scss';
 
 function TodoTemplate({ children }: any) {
   return (
