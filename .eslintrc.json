@@ -4,7 +4,7 @@
     "import/resolver": {
       "alias": {
         "map": [["@", "./src"]],
-        "extensions": [".js", ".tsx", ".css", ".scss"]
+        "extensions": [".js", ".ts", ".tsx", ".css", ".scss"]
       }
     }
   },
