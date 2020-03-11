@@ -8,14 +8,21 @@ import cn from 'classnames';
 import { TodoProps } from '@/common/type';
 import '@/styles/TodoListItem.scss';
 
-
-function TodoListItem({ todo: { checked, id, text }, onRemove }: TodoProps) {
+function TodoListItem({
+  todo: { checked, id, text },
+  onRemove,
+  onToggle,
+}: TodoProps) {
   return (
     <div className="TodoListItem">
-      <div className={cn('checkbox', { checked })}>
+      <button
+        type="button"
+        className={cn('checkbox', { checked })}
+        onClick={() => onToggle(id)}
+      >
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
-      </div>
+      </button>
       <button type="button" className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
       </button>

@@ -1,11 +1,14 @@
-export interface TodoArrayProps {
+export interface TodoArrayProps extends TodoFunctions{
   todos: Todo[],
-  onRemove: Function
 }
 
-export interface TodoProps {
-  todo: Todo,
+export interface TodoFunctions {
   onRemove: Function
+  onToggle: Function
+}
+
+export interface TodoProps extends TodoFunctions{
+  todo: Todo,
 }
 
 export interface Todo {
