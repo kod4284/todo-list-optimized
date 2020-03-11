@@ -1,21 +1,14 @@
 import React from 'react';
 import TodoListItem from '@/components/TodoListItem';
 import '@/styles/TodoList.scss';
+import { todoArrayProps } from '@/common/type';
 
-interface Props {
-  todos: {
-    id: number,
-    text: string,
-    checked: boolean,
-  }
-}
-
-function TodoList({ todos: { id, text, checked } }: Props) {
+function TodoList({ todos }: todoArrayProps) {
   return (
     <div className="TodoList">
-      <TodoListItem />
-      <TodoListItem />
-      <TodoListItem />
+      {todos.map((todo) => (
+        <TodoListItem todo={todo} key={todo.id} />
+      ))}
     </div>
   );
 }
