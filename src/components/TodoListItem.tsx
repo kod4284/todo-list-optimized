@@ -5,11 +5,11 @@ import {
   MdRemoveCircleOutline,
 } from 'react-icons/md';
 import cn from 'classnames';
-import { todoProps } from '@/common/type';
+import { TodoProps } from '@/common/type';
 import '@/styles/TodoListItem.scss';
 
 
-function TodoListItem({ todo: { checked, id, text }, onRemove }: todoProps) {
+function TodoListItem({ todo: { checked, id, text }, onRemove }: TodoProps) {
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>

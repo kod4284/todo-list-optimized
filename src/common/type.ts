@@ -1,14 +1,14 @@
-export interface todoArrayProps {
-  todos: todo[],
+export interface TodoArrayProps {
+  todos: Todo[],
   onRemove: Function
 }
 
-export interface todoProps {
-  todo: todo,
+export interface TodoProps {
+  todo: Todo,
   onRemove: Function
 }
 
-export interface todo {
+export interface Todo {
   id: number,
   text: string,
   checked: boolean,
