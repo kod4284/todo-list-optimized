@@ -4,11 +4,6 @@ import TodoTemplate from '@/components/TodoTemplate';
 import TodoInsert from '@/components/TodoInsert';
 
 function App() {
-  interface todos {
-    id: number;
-    text: string;
-    checked: boolean;
-  }
   const [todos, setTodos] = useState([
     {
       id: 1,
