@@ -1,6 +1,6 @@
 ## Description
 
-This is a boilerplate composed by creact-react-app-typescript with craco absolute path setting, ts-lint.
+This is simple todolist react-ts app without performance optimization.
 
 ## Available Scripts
 
