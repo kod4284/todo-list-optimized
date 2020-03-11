@@ -20,3 +20,8 @@ export interface Todo {
 export interface TodoInsertProps {
   onInsert: Function,
 }
+
+export interface TodoAction {
+  type: string,
+  [x: string]: any
+}
