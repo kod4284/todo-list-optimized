@@ -30,4 +30,4 @@ function TodoListItem({
   );
 }
 
-export default TodoListItem;
+export default React.memo(TodoListItem);

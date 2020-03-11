@@ -3,26 +3,22 @@ import TodoList from '@/components/TodoList';
 import TodoTemplate from '@/components/TodoTemplate';
 import TodoInsert from '@/components/TodoInsert';
 
-function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      text: 'Studying basic concepts of React.',
-      checked: true,
-    },
-    {
-      id: 2,
-      text: 'Styling Components',
-      checked: true,
-    },
-    {
-      id: 3,
-      text: 'Making an app which manages todos',
+function makeDummyData() {
+  const array = [];
+  for (let i = 1; i <= 2500; i += 1) {
+    array.push({
+      id: i,
+      text: `todo ${i}`,
       checked: false,
-    },
-  ]);
+    });
+  }
+  return array;
+}
 
-  const nextId = useRef(4);
+function App() {
+  const [todos, setTodos] = useState(makeDummyData);
+
+  const nextId = useRef(2501);
 
   const onInsert = useCallback(
     (text) => {
@@ -31,26 +27,29 @@ function App() {
         text,
         checked: false,
       };
-      setTodos(todos.concat(todo));
+      setTodos((prevTodos) => prevTodos.concat(todo));
       nextId.current += 1;
     },
-    [todos],
+    [],
   );
 
   const onRemove = useCallback(
     (id) => {
-      setTodos(todos.filter((todo) => todo.id !== id));
+      setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
     },
-    [todos],
+    [],
   );
 
-  const onToggle = useCallback((id) => {
-    setTodos(
-      todos.map((todo) => (
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo
-      )),
-    );
-  }, [todos]);
+  const onToggle = useCallback(
+    (id) => {
+      setTodos(
+        (prevTodos) => prevTodos.map((todo) => (
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo
+        )),
+      );
+    },
+    [],
+  );
 
   return (
     <TodoTemplate>
