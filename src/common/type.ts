@@ -11,3 +11,7 @@ export interface todo {
   text: string,
   checked: boolean,
 }
+
+export interface TodoInsertProps {
+  onInsert: Function,
+}
