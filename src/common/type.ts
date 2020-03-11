@@ -1,9 +1,11 @@
 export interface todoArrayProps {
-  todos: todo[]
+  todos: todo[],
+  onRemove: Function
 }
 
 export interface todoProps {
-  todo: todo
+  todo: todo,
+  onRemove: Function
 }
 
 export interface todo {

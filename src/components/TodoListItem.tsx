@@ -9,16 +9,16 @@ import { todoProps } from '@/common/type';
 import '@/styles/TodoListItem.scss';
 
 
-function TodoListItem({ todo: { checked, text } }: todoProps) {
+function TodoListItem({ todo: { checked, id, text }, onRemove }: todoProps) {
   return (
     <div className="TodoListItem">
       <div className={cn('checkbox', { checked })}>
         {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
         <div className="text">{text}</div>
       </div>
-      <div className="remove">
+      <button type="button" className="remove" onClick={() => onRemove(id)}>
         <MdRemoveCircleOutline />
-      </div>
+      </button>
     </div>
   );
 }
