@@ -1,6 +1,6 @@
 ## Description
 
-This is simple todolist react-ts app without performance optimization.
+This is simple todolist react-ts app with performance optimization.
 
 ## Available Scripts
 
