@@ -9,6 +9,7 @@ export interface TodoFunctions {
 
 export interface TodoProps extends TodoFunctions{
   todo: Todo,
+  style?: any,
 }
 
 export interface Todo {

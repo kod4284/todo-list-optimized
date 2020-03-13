@@ -12,20 +12,23 @@ function TodoListItem({
   todo: { checked, id, text },
   onRemove,
   onToggle,
+  style,
 }: TodoProps) {
   return (
-    <div className="TodoListItem">
-      <button
-        type="button"
-        className={cn('checkbox', { checked })}
-        onClick={() => onToggle(id)}
-      >
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div className="text">{text}</div>
-      </button>
-      <button type="button" className="remove" onClick={() => onRemove(id)}>
-        <MdRemoveCircleOutline />
-      </button>
+    <div className="TodoListItem-virtualized" style={style}>
+      <div className="TodoListItem">
+        <button
+          type="button"
+          className={cn('checkbox', { checked })}
+          onClick={() => onToggle(id)}
+        >
+          {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
+          <div className="text">{text}</div>
+        </button>
+        <button type="button" className="remove" onClick={() => onRemove(id)}>
+          <MdRemoveCircleOutline />
+        </button>
+      </div>
     </div>
   );
 }
